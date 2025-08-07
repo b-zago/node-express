@@ -1,4 +1,6 @@
-import express, { Request, Response } from "express";
+import type { Request, Response } from "express";
+
+import express from "express";
 
 // Create a new express application instance
 const app = express();
@@ -8,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 // Define the root path with a greeting message
 app.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Welcome to the Express + TypeScript Server!!!" });
+  res.json({ message: "Welcome to the Express + TypeScript Server!" });
 });
 
 // Start the Express server
